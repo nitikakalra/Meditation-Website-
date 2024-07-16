@@ -52,7 +52,7 @@
                         </tr>
                         <tr class="form-group">
                             <td><label for="email">Email:</label></td>
-                            <td><input type="email" id="email" name="email" required></td>
+                            <td><input type="email" id="email" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required></td>
                         </tr>
                         <tr class="form-group">
                             <td><label for="password">Password:</label></td>
@@ -70,10 +70,7 @@
                             <td><label for="dob">Date of Birth:</label></td>
                             <td><input required type="date" id="dob" name="dob"></td>
                         </tr>
-                        <tr class="form-group">
-                            <td><label for="address">Address:</label></td>
-                            <td><input required type="text" id="address" name="address"></td>
-                        </tr>
+                       
                         <tr class="form-group">
                             <td><label for="city">City:</label></td>
                             <td><input required type="text" id="city" name="city"></td>
@@ -82,10 +79,7 @@
                             <td><label for="state">State:</label></td>
                             <td><input required type="text" id="state" name="state"></td>
                         </tr>
-                        <tr class="form-group">
-                            <td><label for="zip">Zip Code:</label></td>
-                            <td><input required type="text" id="zip" name="zip"></td>
-                        </tr>
+                        
                         <tr class="form-group">
                             <td><label for="country">Country:</label></td>
                             <td>
@@ -93,7 +87,7 @@
                                     <option value="">Select Country</option>
                                     <option value="us">United States</option>
                                     <option value="ca">Canada</option>
-                                    <option value="uk">United Kingdom</option>
+                                    <option value="in">India</option>
                                     <option value="au">Australia</option>
                                     <option value="other">Other</option>
                                 </select>
