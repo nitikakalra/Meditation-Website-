@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>KALM</title>
+</head>
+<body>
+   <div class="container">
+       <div class="navbar">
+           <div class="logo">
+                <a href="index.html">         
+                        <img src="images/logo.png">
+                </a> 
+           </div>
+           <nav id="menu"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="meda.html">Media</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+               <img src="images/close.png" class="close-icon" onclick="closemenu()">
+           </nav>
+           <img src="images/menu.png" class="menu-icon" onclick="openmenu()">
+       </div>   
+      
+       
+       <div class="about-container">
+        <div class="about-content">
+            <h4>Signup Here</h4> <br><hr>
+        </div>  
+        </div>
+        <div class="about-container">
+            <div class="about-content">
+                <form action="#submit" method="post" onsubmit="return handleSubmit()">
+                    <table style="max-width: 900px;">
+                        <tr class="form-group">
+                            <td><label for="first-name">First Name:</label></td>
+                            <td><input type="text" id="first-name" name="first-name" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="last-name">Last Name:</label></td>
+                            <td><input type="text" id="last-name" name="last-name" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" id="email" name="email" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="password">Password:</label></td>
+                            <td><input type="password" id="password" name="password" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="confirm-password">Confirm Password:</label></td>
+                            <td><input type="password" id="confirm-password" name="confirm-password" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="phone">Phone:</label></td>
+                            <td><input required type="tel" id="phone" name="phone" pattern="[0-9\s\-]+"></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="dob">Date of Birth:</label></td>
+                            <td><input required type="date" id="dob" name="dob"></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="address">Address:</label></td>
+                            <td><input required type="text" id="address" name="address"></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="city">City:</label></td>
+                            <td><input required type="text" id="city" name="city"></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="state">State:</label></td>
+                            <td><input required type="text" id="state" name="state"></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="zip">Zip Code:</label></td>
+                            <td><input required type="text" id="zip" name="zip"></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="country">Country:</label></td>
+                            <td>
+                                <select required id="country" name="country">
+                                    <option value="">Select Country</option>
+                                    <option value="us">United States</option>
+                                    <option value="ca">Canada</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="au">Australia</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="gender">Gender:</label></td>
+                            <td>
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female" required>
+                                <label for="female">Female</label>
+                                <input type="radio" id="other" name="gender" value="other" required>
+                                <label for="other">Other</label>
+                            </td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="message"></label></td>
+                            <td><button type="submit">Signup</button></td>
+                        </tr>
+                    </table>
+                </form>
+                
+            </div>
+        </div>
+   </div> 
+   <br><br>
+   <footer>
+    <p>@kalm by nitika<br>
+    <a href="mailto:hege@example.com">nitika@gmail.com</a></p>
+  </footer>
+<script>
+    var menu = document.getElementById("menu")
+    function closemenu(){
+        menu.style.top = "-100vh";
+    }
+    function openmenu(){
+        menu.style.top = "0";
+        
+    }
+</script>
+<script>
+    function handleSubmit() {
+        // You can perform additional checks or actions here if needed
+        alert('Signup Success !');
+        // Redirect to mda.html after form submission
+        window.location.href = "login.html";
+
+        return false; // Allows the form submission to proceed
+    }
+</script>
+</body>
+</html>

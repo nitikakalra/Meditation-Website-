@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>KALM</title>
+</head>
+<body>
+   <div class="container">
+       <div class="navbar">
+           <div class="logo">
+                <a href="index.html">         
+                        <img src="images/logo.png">
+                </a> 
+           </div>
+           <nav id="menu"> 
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="meda.html">Media</a></li>
+                <li><a href="signup.html">Signup</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                
+            </ul>
+               <img src="images/close.png" class="close-icon" onclick="closemenu()">
+           </nav>
+           <img src="images/menu.png" class="menu-icon" onclick="openmenu()">
+       </div>   
+      
+       
+       <div class="about-container">
+        <div class="about-content">
+            <h4>Contact Us</h4> <br> <hr>
+        </div>  
+        </div>
+        <div class="about-container">
+            <div class="about-content">
+                <form id="contactform" action="#submit" method="post" onsubmit="return handleSubmit()">
+                    <table>
+                        <tr class="form-group">
+                            <td><label for="name">Name:</label></td>
+                            <td><input type="text" id="name" name="name" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="email">Email:</label></td>
+                            <td><input type="email" id="email" name="email" required></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="message">Message:</label></td>
+                            <td><textarea id="message" name="message" rows="5" required></textarea></td>
+                        </tr>
+                        <tr class="form-group">
+                            <td><label for="message"></label></td>
+                            <td><button type="submit">Submit</button></td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+   </div> 
+   <br>
+   <br>
+   <br>
+  
+  
+<script>
+    var menu = document.getElementById("menu")
+    function closemenu(){
+        menu.style.top = "-100vh";
+    }
+    function openmenu(){
+        menu.style.top = "0";
+        
+    }
+</script>
+<script>
+    function handleSubmit() {
+        // You can perform additional checks or actions here if needed
+        alert('Message Send.. We Will Reply You Shortly !');
+
+        // Clear the form fields
+        document.getElementById("contactform").reset();
+
+        return false; // Allows the form submission to proceed
+    }
+</script>
+</body>
+</html>

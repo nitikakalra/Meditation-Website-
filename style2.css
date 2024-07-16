@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Patrick Hand', cursive;
+    background: #FFFDF9;
+}
+.container{
+    
+    width: 100%;
+    position: relative;
+    background: #FFFDF9;
+}
+
+.navbar{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    font-family: 'Amatic SC', cursive;
+    color: #575988;
+    position: relative;
+}
+.logo{
+    font-size: 40px;
+}
+/*
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #575988;
+    font-size: 24px;
+    padding: 15px 5px;
+}
+
+nav ul li a:hover{
+    color: #FF759D;
+    border-bottom: 3px solid #FF759D;
+}
+*/
+nav ul li{
+    list-style: none;
+    margin: 35px 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 40px;
+    color: #575988;
+    padding: 5px;
+    letter-spacing: 5px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #FF759D;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+nav{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #FFFDF9;
+    z-index: 12;
+    top: -100vh;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 1s;
+}
+.close-icon{
+    width: 30px;
+    position: absolute;
+    right: 80px;
+    top:50px;
+    cursor: pointer;
+}
+.menu-icon{
+    width: 35px;
+    cursor: pointer;
+    position: absolute;
+    right: 80px;
+    top: 40px;
+
+}
+.content-row{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.left-col, .right-col{
+    flex-basis: 50%;
+
+}
+
+.left-col{
+    padding: 180px 0;
+}
+.left-col h3{
+    font-size: 50px;
+    color: #575988;
+    
+}
+
+.left-col p{
+    font-size: 30px;
+    color: #FF759D;
+
+    margin: 20px 0;
+}
+
+.right-col img{
+    width: 100%;
+}
+.about-container{
+    position: relative;
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+    flex-direction: column;
+}
+
+.about-content{
+    font-size: 48px;
+    color: #575988;
+    text-align: center;
+    flex-direction: column; 
+    position: relative;
+    left: 90px;
+
+}
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.about-container .card{
+    position: relative;
+    max-width: 300px;
+    height: 300px;
+    background: #E9FFFF;
+    margin: 80px 20px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    left: 120px;
+
+}
+.card-image .card-text{
+    background: #E9FFFF;
+    
+}
+
+.about-container .card-image{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.about-container .card-image img{
+    max-width: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.about-container .card-text{
+    font-size: 24px;
+    color: #575988;
+    text-align: center;
+    
+}
+.content-para{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #575988;
+    position: relative;
+    left: 120px;
+    text-align: justify;
+}
+/*%%%%%%% MEDITATION APP %%%%%%%%*/
+.meda-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 25px;
+    font-size: 30px;
+    color: #575988;
+}
+.app{
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+}
+
+.time-select, .sound-picker, .player-container{
+    height: 90%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.player-container{
+    position: relative;
+    
+}
+
+.play{
+    z-index: 9;
+}
+.track-outline{
+    
+    z-index: 8;
+}
+.moving-outline{
+    
+    z-index: 7;
+}
+.player-container svg{
+    position: absolute;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-90deg);
+    pointer-events: none;
+}
+.time-display{
+    position: absolute;
+    bottom: 5%;
+    color: #575988;
+    font-size: 50px;
+}
+.time-select button
+ {
+    color: #FF759D;
+    width: 30%;
+    height: 10%;
+    background: none;
+    font-size: 24px;
+    border: 5px solid #E9FFFF;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.sound-picker button{
+    width: 40%;
+    height: 30%;
+    border: 5px solid #E9FFFF;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.time-select button:hover, .sound-picker button:hover{
+    color: #FF759D;
+    background: #575988;
+}
+
+
+/*
+.heart{
+    color: red;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+.made{
+    position: absolute;
+    right: 80px;
+    top:750px;
+    /*transform: translateY(-50%);
+    color: #FF759D;
+}
+*/
+
